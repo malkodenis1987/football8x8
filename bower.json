@@ -1,0 +1,25 @@
+{
+  "name": "football8x8",
+  "version": "0.0.1",
+  "homepage": "",
+  "authors": [
+    "dmalko <malko.denis1987@gmail.com>"
+  ],
+  "description": "football8x8 redesign",
+  "keywords": [
+    "bower",
+    "grunt"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "fullcalendar": "*"
+  }
+}
