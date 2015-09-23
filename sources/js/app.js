@@ -3,4 +3,7 @@
  */
 jQuery(function($){
     console.log('app init');
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip({html: true})
+    })
 })

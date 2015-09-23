@@ -1,0 +1,24 @@
+.table {
+  font-size: 12px;
+  .alignleft {
+    text-align: left;
+  }
+  .alignright {
+    text-align: right;
+  }
+  .aligncenter {
+    text-align: center;
+  }
+  .tooltip {
+    font-size: 11px;
+    table {
+      td {
+        text-align: left;
+        vertical-align: top;
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
