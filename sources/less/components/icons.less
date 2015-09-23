@@ -1,0 +1,35 @@
+.football-ico {
+  display: inline-block;
+  &:before {
+    content: " ";
+    display: inline-block;
+    float: left;
+    height: 14px;
+    line-height: 20px;
+    padding-left: 25px;
+  }
+  &.goal {
+    &:before {
+      background: url("../img/icons/football-ico-goal.svg") left 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  &.yc {
+    &:before {
+      background: url("../img/icons/football-ico-yc-alt.svg") left 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  &.rc {
+    &:before {
+      background: url("../img/icons/football-ico-rc-alt.svg") left 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+  &.pen {
+    &:before {
+      background: url("../img/icons/football-ico-penalty.svg") left 0 no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

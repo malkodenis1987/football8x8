@@ -1,7 +1,28 @@
 @main_menu_font_size: 14px;
 
 .navbar-default {
+  background-color: @green;
+  border-color: @green_dark;
   .navbar-brand {
+    color: @white;
     font-size: @main_menu_font_size;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        color: @white;
+        &:hover {
+          color: @green_darken;
+        }
+      }
+    }
+    > .open {
+      > a {
+        background-color: @green_light;
+        &:hover {
+          background-color: @green_light;
+        }
+      }
+    }
   }
 }
