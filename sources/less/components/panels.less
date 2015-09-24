@@ -1,14 +1,31 @@
-.panel-default {
+.panel {
+  border-radius: 0;
+  border: none;
   .panel-heading {
-    background-color: @green;
-    border-color: @green_dark;
-    color: @white;
+    border-radius: 0;
     .label {
       float: right;
       margin-top: 2px;
       &:hover {
         opacity: 0.8;
       }
+    }
+  }
+  > table {
+    border-radius: 0 !important;
+    tr:last-child {
+      border-radius: 0 !important;
+      td:first-child,
+      td:last-child {
+        border-radius: 0 !important;
+      }
+    }
+  }
+  &.panel-default {
+    .panel-heading {
+      background-color: @green;
+      border-color: @green_dark;
+      color: @white;
     }
   }
 }

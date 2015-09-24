@@ -24,8 +24,11 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h3>Черниговская Ассоциация футбола 8x8</h3>
+                <div class="col-md-1">
+                    <a class="logo" href="index.html"><img src="assets/img/logo.png" alt=""/></a>
+                </div>
+                <div class="col-md-11">
+                    <h3 class="logo">Черниговская Ассоциация футбола 8x8</h3>
                 </div>
             </div>
             <div class="row">
@@ -45,9 +48,25 @@
                                 </div>
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
-                                        <li><a href="#">Новости <span class="sr-only">(current)</span></a></li>
+                                        <li><a href="news.html">Новости <span class="sr-only">(current)</span></a></li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Матчи <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="matches.html">Все матчи</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Высшая лига</a></li>
+                                                <li><a href="#">Первая лига</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Группа А</a></li>
+                                                <li><a href="#">Группа Б</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Вторая лига</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Юниорская лига</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Таблицы <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="#">Высшая лига</a></li>
                                                 <li><a href="#">Первая лига</a></li>
@@ -96,7 +115,7 @@
                                         <button type="submit" class="btn btn-default">Поиск</button>
                                     </form>
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="#">Спонсоры</a></li>
+                                        <li><a href="#">Статистика</a></li>
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Аккаунт <span class="caret"></span></a>
                                             <ul class="dropdown-menu">
@@ -1026,6 +1045,169 @@
                                     <td class="alignright">3</td>
                                 </tr>
                             </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><a href="#"><span class="label label-default">Плей-офф</span></a>Первая лига</div>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td class="time">23.09</td>
+                                <td class="home alignright">Свобода</td>
+                                <td class="score aligncenter">x-x</td>
+                                <td class="visitor alignleft">Ски-Рекс</td>
+                            </tr>
+                            <tr>
+                                <td class="time">24.09</td>
+                                <td class="home alignright">Парадокс</td>
+                                <td class="score aligncenter">x-x</td>
+                                <td class="visitor alignleft">Подусовка</td>
+                            </tr>
+                            <tr>
+                                <td class="time">22.09</td>
+                                <td class="home alignright">Заз</td>
+                                <td class="score aligncenter">x-x</td>
+                                <td class="visitor alignleft">Кит и Пес</td>
+                            </tr>
+                            <tr>
+                                <td class="time">22.09</td>
+                                <td class="home alignright">Удар-2</td>
+                                <td class="score aligncenter">
+                                    <a href="#"
+                                       data-toggle="tooltip"
+                                       data-placement="top"
+                                       title="<table><tr>
+                                                        <td>16' Селезнев <br />34' Карпин</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>Пупкин 45'</td>
+                                                   </tr></table>">1-3
+                                    </a>
+                                </td>
+                                <td class="visitor alignleft">Холдинг-2</td>
+                            </tr>
+                            <tr>
+                                <td class="time">22.09</td>
+                                <td class="home alignright">Удар-2</td>
+                                <td class="score aligncenter">
+                                    <a href="#"
+                                       data-toggle="tooltip"
+                                       data-placement="top"
+                                       title="<table><tr>
+                                                        <td>16' Селезнев <br />34' Карпин</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>Пупкин 45'</td>
+                                                   </tr></table>">1-3
+                                    </a>
+                                </td>
+                                <td class="visitor alignleft">Холдинг-2</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr class="active">
+                                <th colspan="4">статистика тура</th>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><span class="football-ico goal">Голов</span></td>
+                                <td class="alignright">12</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><span class="football-ico pen">Пенальти (незабитые)</span></td>
+                                <td class="alignright">3 (1)</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><span class="football-ico yc">Желтых карточек</span></td>
+                                <td class="alignright">3</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><span class="football-ico rc">Красных карточек</span></td>
+                                <td class="alignright">3</td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-warning">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Ближайшие матчи</div>
+                        <table class="table">
+                            <tbody>
+                                <tr class="active">
+                                    <th colspan="4">Высшая лига</th>
+                                </tr>
+                                <tr>
+                                    <td class="time">23.09</td>
+                                    <td class="home alignright">Свобода</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Ски-Рекс</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">24.09</td>
+                                    <td class="home alignright">Парадокс</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Подусовка</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">22.09</td>
+                                    <td class="home alignright">Заз</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Кит и Пес</td>
+                                </tr>
+                                <tr class="active">
+                                    <th colspan="4">Первая лига. Группа А</th>
+                                </tr>
+                                <tr>
+                                    <td class="time">23.09</td>
+                                    <td class="home alignright">Свобода</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Ски-Рекс</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">24.09</td>
+                                    <td class="home alignright">Парадокс</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Подусовка</td>
+                                </tr>
+                                <tr class="active">
+                                    <th colspan="4">Первая лига. Группа Б</th>
+                                </tr>
+                                <tr>
+                                    <td class="time">23.09</td>
+                                    <td class="home alignright">Свобода</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Ски-Рекс</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">24.09</td>
+                                    <td class="home alignright">Парадокс</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Подусовка</td>
+                                </tr>
+                                <tr class="active">
+                                    <th colspan="4">Вторая лига</th>
+                                </tr>
+                                <tr>
+                                    <td class="time">23.09</td>
+                                    <td class="home alignright">Свобода</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Ски-Рекс</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">23.09</td>
+                                    <td class="home alignright">Свобода</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Ски-Рекс</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">24.09</td>
+                                    <td class="home alignright">Парадокс</td>
+                                    <td class="score aligncenter">x-x</td>
+                                    <td class="visitor alignleft">Подусовка</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

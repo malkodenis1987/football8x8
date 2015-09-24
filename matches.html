@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Черниговская Ассоциация футбола 8x8</title>
+
+    <!-- Bower components-->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.min.css"/>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="assets/css/app.min.css"/>
+
+    <script src="assets/js/app.min.js"></script>
+
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+                <a class="logo" href="index.html"><img src="assets/img/logo.png" alt=""/></a>
+            </div>
+            <div class="col-md-11">
+                <h3 class="logo">Черниговская Ассоциация футбола 8x8</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-menu">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index.html">Главная</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="news.html">Новости <span class="sr-only">(current)</span></a></li>
+                                    <li class="dropdown active">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Матчи <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="matches.html">Все матчи</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Высшая лига</a></li>
+                                            <li><a href="#">Первая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Группа А</a></li>
+                                            <li><a href="#">Группа Б</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Вторая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Юниорская лига</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Таблицы <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Высшая лига</a></li>
+                                            <li><a href="#">Первая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Группа А</a></li>
+                                            <li><a href="#">Группа Б</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Вторая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Юниорская лига</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Команды <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Высшая лига</a></li>
+                                            <li><a href="#">Первая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Группа А</a></li>
+                                            <li><a href="#">Группа Б</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Вторая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Юниорская лига</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Игроки <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Высшая лига</a></li>
+                                            <li><a href="#">Первая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Группа А</a></li>
+                                            <li><a href="#">Группа Б</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Вторая лига</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Юниорская лига</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <form class="navbar-form navbar-left" role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="найти">
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Поиск</button>
+                                </form>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#">Статистика</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Аккаунт <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Вход</a></li>
+                                            <li><a href="#">Регистрация</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Content -->
+<div id="content" class="content">
+    <div class="container">
+        <div class="row">
+            <!-- Main -->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">Все матчи</div>
+                        </div>
+                        <div class="matches">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">По дате</a></li>
+                                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">По турам</a></li>
+
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active" id="home">
+                                            xxx
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="profile">
+                                            yyy
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading"><a href="#"><span class="label label-default">подробнее</span></a>Высшая лига</div>
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Команда</th>
+                            <th>И</th>
+                            <th>О</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td>1</td>
+                            <td><a href="#">Холдинг</a></td>
+                            <td>18</td>
+                            <td>49</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2</td>
+                            <td><a href="#">Ремзавод</a></td>
+                            <td>19</td>
+                            <td>45</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>3</td>
+                            <td><a href="#">Гамма</a></td>
+                            <td>20</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#">Газ-Мяс-Спиртовик</a></td>
+                            <td>19</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>LSD</td>
+                            <td>19</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Стрела</td>
+                            <td>18</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>БЮС-гарантия</td>
+                            <td>20</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>ВПК-сервис</td>
+                            <td>19</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Удар</td>
+                            <td>21</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td> Динамо-УМВС</td>
+                            <td>17</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Максимум</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Нива</td>
+                            <td>20</td>
+                            <td>17</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>13</td>
+                            <td>Гурру</td>
+                            <td>20</td>
+                            <td>15</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>14</td>
+                            <td>Питер</td>
+                            <td>21</td>
+                            <td>3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading"><a href="#"><span class="label label-default">подробнее</span></a>Первая лига. Группа А</div>
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Команда</th>
+                            <th>И</th>
+                            <th>О</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td>1</td>
+                            <td>Эпицентр</td>
+                            <td>18</td>
+                            <td>49</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2</td>
+                            <td>Гамма-2</td>
+                            <td>19</td>
+                            <td>45</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>3</td>
+                            <td>Легион</td>
+                            <td>20</td>
+                            <td>40</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>4</td>
+                            <td>Ласточка</td>
+                            <td>19</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Сиверяне</td>
+                            <td>19</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Октябрьский Молот</td>
+                            <td>18</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Фортуна</td>
+                            <td>20</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Буревестник</td>
+                            <td>19</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Спарта</td>
+                            <td>21</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Нива-2</td>
+                            <td>17</td>
+                            <td>25</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>11</td>
+                            <td>Масан-Сити</td>
+                            <td>20</td>
+                            <td>15</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>12</td>
+                            <td>Корсика</td>
+                            <td>21</td>
+                            <td>3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading"><a href="#"><span class="label label-default">подробнее</span></a>Первая лига. Группа Б</div>
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Команда</th>
+                            <th>И</th>
+                            <th>О</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td>1</td>
+                            <td>Стрелка</td>
+                            <td>18</td>
+                            <td>49</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2</td>
+                            <td>Свобода</td>
+                            <td>19</td>
+                            <td>45</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>3</td>
+                            <td>Холдинг-2</td>
+                            <td>20</td>
+                            <td>40</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>4</td>
+                            <td>Ски-Рекс</td>
+                            <td>19</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Кот и Пёс</td>
+                            <td>19</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Стандарт</td>
+                            <td>18</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Удар-2</td>
+                            <td>20</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Парадокс</td>
+                            <td>19</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>ЗАЗ</td>
+                            <td>21</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>УСБ</td>
+                            <td>17</td>
+                            <td>25</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>11</td>
+                            <td>Подусовка</td>
+                            <td>20</td>
+                            <td>15</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>12</td>
+                            <td>Старт</td>
+                            <td>21</td>
+                            <td>3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading"><a href="#"><span class="label label-default">подробнее</span></a>Вторая лига</div>
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Команда</th>
+                            <th>И</th>
+                            <th>О</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td>1</td>
+                            <td>Барс</td>
+                            <td>18</td>
+                            <td>49</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>2</td>
+                            <td>Роял</td>
+                            <td>19</td>
+                            <td>45</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>3</td>
+                            <td>Энерджи</td>
+                            <td>20</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Почтовик</td>
+                            <td>19</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Модест</td>
+                            <td>19</td>
+                            <td>32</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>LSD-2</td>
+                            <td>18</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>АКС</td>
+                            <td>20</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Удар-3</td>
+                            <td>19</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>УСБ-2</td>
+                            <td>21</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Коты</td>
+                            <td>17</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>ВААСА</td>
+                            <td>21</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Газ-Мяс-Спиртовик-2</td>
+                            <td>17</td>
+                            <td>25</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>11</td>
+                            <td>Биатлон</td>
+                            <td>20</td>
+                            <td>15</td>
+                        </tr>
+                        <tr class="danger">
+                            <td>12</td>
+                            <td>Подусовка-2</td>
+                            <td>21</td>
+                            <td>3</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Партнеры -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Партнеры</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Черниговская Ассоциация футбола 8х8 (дворового футбола) &copy; 2007-2015</h4>
+                <p>Перепечатка материалов и использование их в любой форме, в том числе и в электронных СМИ,
+                    возможно только при условии указания ссылки на сайт www.football8x8.com.ua.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
