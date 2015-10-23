@@ -1,27 +1,32 @@
 .table {
-  font-size: 12px;
-  .alignleft {
-    text-align: left;
-  }
-  .alignright {
-    text-align: right;
-  }
-  .aligncenter {
-    text-align: center;
-  }
-  a {
-    color: @text_color;
-  }
-  .tooltip {
-    font-size: 11px;
-    table {
-      td {
+    font-size: 12px;
+    .alignleft {
         text-align: left;
-        vertical-align: top;
-        &:last-child {
-          text-align: right;
-        }
-      }
     }
-  }
+    .alignright {
+        text-align: right;
+    }
+    .aligncenter {
+        text-align: center;
+    }
+    a {
+        color: @text_color;
+    }
+    .tooltip {
+        font-size: 11px;
+        table {
+            td {
+                text-align: left;
+                vertical-align: top;
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    td {
+        &.time {
+            width: 25%;
+        }
+    }
 }
