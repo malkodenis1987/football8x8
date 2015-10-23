@@ -1,0 +1,309 @@
+/* components */
+body {
+  background: #f0f2f1 url("../img/bg/bg-4.jpg") center top no-repeat;
+  background-attachment: fixed;
+}
+body .content > .container {
+  background: #ffffff;
+  padding-top: 15px;
+}
+.logo {
+  display: block;
+  padding: 10px 0;
+}
+.logo img {
+  max-width: 100%;
+}
+footer .container {
+  background: #ffffff;
+}
+a {
+  color: #8bc278;
+}
+a:hover {
+  color: #8bc278;
+}
+.label a {
+  color: #ffffff;
+}
+.table {
+  font-size: 12px;
+}
+.table .alignleft {
+  text-align: left;
+}
+.table .alignright {
+  text-align: right;
+}
+.table .aligncenter {
+  text-align: center;
+}
+.table a {
+  color: #333333;
+}
+.table .tooltip {
+  font-size: 11px;
+}
+.table .tooltip table td {
+  text-align: left;
+  vertical-align: top;
+}
+.table .tooltip table td:last-child {
+  text-align: right;
+}
+.table td.time {
+  width: 25%;
+}
+.panel {
+  border-radius: 0;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+.panel .panel-heading {
+  background-color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eeeeee));
+  background: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+  background: -moz-linear-gradient(top, #ffffff, #eeeeee);
+  background: -ms-linear-gradient(top, #ffffff, #eeeeee);
+  background: -o-linear-gradient(top, #ffffff, #eeeeee);
+  border-radius: 0;
+  border: none;
+  color: #333333;
+}
+.panel .panel-heading .label {
+  float: right;
+  margin-top: 2px;
+}
+.panel .panel-heading .label:hover {
+  opacity: 0.8;
+}
+.panel .panel-heading.title {
+  border-bottom: 1px #dddddd solid;
+  font-weight: 700;
+  text-align: center;
+}
+.panel > table {
+  border-radius: 0 !important;
+}
+.panel > table tr:last-child {
+  border-radius: 0 !important;
+}
+.panel > table tr:last-child td:first-child,
+.panel > table tr:last-child td:last-child {
+  border-radius: 0 !important;
+}
+.panel.panel-default .panel-heading {
+  color: #333333;
+}
+.panel.title .panel-heading {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.panel.panel-no-border {
+  box-shadow: none;
+  border: none;
+}
+.football-ico {
+  display: inline-block;
+}
+.football-ico:before {
+  content: " ";
+  display: inline-block;
+  float: left;
+  height: 14px;
+  line-height: 20px;
+  padding-left: 25px;
+}
+.football-ico.goal:before {
+  background: url("../img/icons/football-ico-goal.svg") left 0 no-repeat;
+  background-size: 100% 100%;
+}
+.football-ico.yc:before {
+  background: url("../img/icons/football-ico-yc-alt.svg") left 0 no-repeat;
+  background-size: 100% 100%;
+}
+.football-ico.rc:before {
+  background: url("../img/icons/football-ico-rc-alt.svg") left 0 no-repeat;
+  background-size: 100% 100%;
+}
+.football-ico.pen:before {
+  background: url("../img/icons/football-ico-penalty.svg") left 0 no-repeat;
+  background-size: 100% 100%;
+}
+.teams .team {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  margin: 5px 5px 5px 0;
+  padding: 1px;
+  text-align: center;
+  width: 30px;
+}
+.teams .team img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.re-time {
+  color: #aa0000;
+  margin-left: 10px;
+}
+.list-group.no-border li {
+  border-left: none;
+  border-right: none;
+}
+.list-group.no-border li:first-child {
+  border-top: none;
+}
+.list-group.no-border li:last-child {
+  border-bottom: none;
+}
+.list-group.no-border li h5 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* blocks */
+.main-menu {
+  background-color: #41ad50;
+  border-color: #8bc278;
+  margin: 0;
+}
+.main-menu .navbar-default {
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+.main-menu .navbar-default .navbar-brand {
+  color: #ffffff;
+  font-size: 14px;
+}
+.main-menu .navbar-default .navbar-nav > li.active > a {
+  background-color: #5fbc6c;
+}
+.main-menu .navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.main-menu .navbar-default .navbar-nav > li > a:hover {
+  background: #5fbc6c;
+}
+.main-menu .navbar-default .navbar-nav > .open > a {
+  background-color: #5fbc6c;
+}
+.main-menu .navbar-default .navbar-nav > .open > a:hover {
+  background-color: #5fbc6c;
+}
+.main-menu .navbar-default .navbar-form .form-group {
+  width: 100%;
+}
+.main-menu .navbar-default .navbar-form .form-group:first-child {
+  margin-bottom: 10px;
+}
+.main-menu .navbar-default .navbar-form .form-group button {
+  width: 100%;
+}
+.carousel {
+  margin-bottom: 20px;
+}
+.carousel .carousel-caption a {
+  color: #ffffff;
+}
+.blog-comment::before,
+.blog-comment::after,
+.blog-comment-form::before,
+.blog-comment-form::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.blog-comment ul {
+  list-style-type: none;
+  padding: 0;
+}
+.blog-comment ul.comments ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 85px;
+}
+.blog-comment img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.blog-comment img.avatar {
+  position: relative;
+  float: left;
+  margin-left: 0;
+  margin-top: 0;
+  width: 65px;
+  height: 65px;
+}
+.blog-comment .post-comments {
+  border: 1px solid #dddddd;
+  margin-bottom: 20px;
+  margin-left: 85px;
+  margin-right: 0;
+  padding: 10px 20px;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #6b6e80;
+}
+.blog-comment .meta {
+  font-size: 13px;
+  color: #aaaaaa;
+  padding-bottom: 8px;
+  margin-bottom: 10px !important;
+  border-bottom: 1px solid #eee;
+}
+.blog-comment .form-group {
+  width: 100%;
+}
+.blog-comment .form-group .form-control,
+.blog-comment .form-group .btn {
+  width: 100%;
+}
+.blog-comment-form {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 40px;
+}
+.pager-container {
+  text-align: center;
+}
+.pager-container .pagination > li > a,
+.pager-container .pagination > li span {
+  color: #8bc278;
+}
+.news .media .media-body {
+  border-bottom: 1px #dddddd solid;
+  padding-bottom: 10px;
+}
+.news .media .media-body .date {
+  font-size: 10px;
+  float: right;
+  margin-top: 1px;
+  padding-top: 4px;
+}
+.nav-tabs > li.active a,
+.nav-tabs > li.active a:focus,
+.nav-tabs > li.active a:hover {
+  background-color: #f0f2f1;
+}
