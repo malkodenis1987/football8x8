@@ -20,6 +20,8 @@
   ],
   "dependencies": {
     "bootstrap": "*",
-    "fullcalendar": "*"
+    "fullcalendar": "*",
+    "angular": "*",
+    "angular-route": "*"
   }
 }

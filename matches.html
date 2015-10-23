@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.min.css"/>
 
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
@@ -19,119 +21,9 @@
     <script src="assets/js/app.min.js"></script>
 
 </head>
-<body>
+<body ng-app>
 <!-- Header -->
-<header>
-    <div class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-default">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="index.html">Главная</a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li><a href="news.html">Новости <span class="sr-only">(current)</span></a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Матчи <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="matches.html">Все матчи</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="matches-liga.html">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Таблицы <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="table-vl.html">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Команды <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Игроки <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Статистика</a></li>
-                            </ul>
-
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search">&nbsp;</span>Поиск <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <form class="navbar-form navbar-left" role="search">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="найти">
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-default">Поиск</button>
-                                                </div>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user">&nbsp;</span>Аккаунт <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Вход</a></li>
-                                        <li><a href="#">Регистрация</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<header ng-include="'components/header.html'"></header>
 <!-- Content -->
 <div id="content" class="content">
     <div class="container">
@@ -1102,17 +994,6 @@
     </div>
 </div>
 <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4>Черниговская Ассоциация футбола 8х8 (дворового футбола) &copy; 2007-2015</h4>
-                <p>Перепечатка материалов и использование их в любой форме, в том числе и в электронных СМИ,
-                    возможно только при условии указания ссылки на сайт www.football8x8.com.ua.
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<footer ng-include="'components/footer.html'"></footer>
 </body>
 </html>

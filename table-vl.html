@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.min.css"/>
 
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
@@ -19,119 +21,9 @@
     <script src="assets/js/app.min.js"></script>
 
 </head>
-<body>
+<body ng-app>
 <!-- Header -->
-<header>
-    <div class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="navbar navbar-default">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="index.html">Главная</a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li><a href="news.html">Новости <span class="sr-only">(current)</span></a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Матчи <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="matches.html">Все матчи</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="matches-liga.html">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Таблицы <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Команды <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Игроки <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Высшая лига</a></li>
-                                        <li><a href="#">Первая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Группа А</a></li>
-                                        <li><a href="#">Группа Б</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Вторая лига</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Юниорская лига</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Статистика</a></li>
-                            </ul>
-
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search">&nbsp;</span>Поиск <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <form class="navbar-form navbar-left" role="search">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" placeholder="найти">
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-default">Поиск</button>
-                                                </div>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user">&nbsp;</span>Аккаунт <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Вход</a></li>
-                                        <li><a href="#">Регистрация</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<header ng-include="'components/header.html'"></header>
 <!-- Content -->
 <div id="content" class="content">
     <div class="container">
@@ -172,169 +64,169 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Команда</th>
-                                                <th>И</th>
-                                                <th>В</th>
-                                                <th>Н</th>
-                                                <th>П</th>
-                                                <th>Г</th>
-                                                <th>РГ</th>
-                                                <th>О</th>
+                                                <th class="aligncenter">И</th>
+                                                <th class="aligncenter">В</th>
+                                                <th class="aligncenter">Н</th>
+                                                <th class="aligncenter">П</th>
+                                                <th class="aligncenter">Г</th>
+                                                <th class="aligncenter">РГ</th>
+                                                <th class="aligncenter">О</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr class="success">
                                                 <td>1</td>
                                                 <td><a href="#">Холдинг</a></td>
-                                                <td>18</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>49</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr class="warning">
                                                 <td>2</td>
                                                 <td><a href="#">Ремзавод</a></td>
-                                                <td>19</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>45</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr class="warning">
                                                 <td>3</td>
                                                 <td><a href="#">Гамма</a></td>
-                                                <td>20</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>40</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
                                                 <td><a href="#">Газ-Мяс-Спиртовик</a></td>
-                                                <td>19</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>38</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>5</td>
                                                 <td>LSD</td>
-                                                <td>19</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>32</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>6</td>
                                                 <td>Стрела</td>
-                                                <td>18</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>29</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>7</td>
                                                 <td>БЮС-гарантия</td>
-                                                <td>20</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>28</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>8</td>
                                                 <td>ВПК-сервис</td>
-                                                <td>19</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>28</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>9</td>
                                                 <td>Удар</td>
-                                                <td>21</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>27</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>10</td>
                                                 <td> Динамо-УМВС</td>
-                                                <td>17</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>25</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>11</td>
                                                 <td>Максимум</td>
-                                                <td>19</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>20</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr>
                                                 <td>12</td>
                                                 <td>Нива</td>
-                                                <td>20</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>17</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr class="danger">
                                                 <td>13</td>
                                                 <td>Гурру</td>
-                                                <td>20</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>15</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             <tr class="danger">
                                                 <td>14</td>
                                                 <td>Питер</td>
-                                                <td>21</td>
-                                                <td>16</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>18-9</td>
-                                                <td>9</td>
-                                                <td>3</td>
+                                                <td class="aligncenter">18</td>
+                                                <td class="aligncenter">16</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">1</td>
+                                                <td class="aligncenter">18-9</td>
+                                                <td class="aligncenter">9</td>
+                                                <td class="aligncenter">49</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -742,17 +634,6 @@
     </div>
 </div>
 <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4>Черниговская Ассоциация футбола 8х8 (дворового футбола) &copy; 2007-2015</h4>
-                <p>Перепечатка материалов и использование их в любой форме, в том числе и в электронных СМИ,
-                    возможно только при условии указания ссылки на сайт www.football8x8.com.ua.
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<footer ng-include="'components/footer.html'"></footer>
 </body>
 </html>
