@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="footApp">
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
@@ -13,6 +13,7 @@
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
 
     <!-- Custom styles and scripts -->
@@ -21,10 +22,35 @@
     <script src="assets/js/app.min.js"></script>
 
 </head>
-<body ng-app>
+<body>
 <!-- Header -->
 <header ng-include="'components/header.html'"></header>
 <!-- Content -->
+
+<div ng-controller="TeamListCtrl">
+    <input type="text" ng-model="query">
+    <select ng-model="orderProp">
+        <option value="name">по названию</option>
+        <option value="stadion">по стадиону</option>
+    </select>
+    <ul>
+        <p>Всего команд: {{teams.length}}</p>
+        <li ng-repeat="team in teams | filter:query | orderBy:orderProp">
+            <p>Название: <b>{{team.name}}</b></p>
+        </li>
+    </ul>
+</div>
+
+<div ng-controller="HttpTest">
+    <select ng-model="type">
+        <option value="hight">высшая лига</option>
+        <option value="low">первая лига</option>
+    </select>
+    <a ng-click="updateModel()" href="javascript:;">поменять</a><br />
+    <p>Лига: {{output}}</p>
+</div>
+
+
 <div id="content" class="content">
     <div class="container">
         <div class="row">
@@ -114,6 +140,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3">
                 <div class="panel panel-default">
@@ -1114,4 +1141,4 @@
 <!-- Footer -->
 <footer ng-include="'components/footer.html'"></footer>
 </body>
-</html>
+</htmlng-app>
