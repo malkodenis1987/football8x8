@@ -44,6 +44,22 @@ module.exports = function (grunt) {
                     'assets/js/app.min.js': ['sources/js/**/*.js']
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['sources/js/**/*.js'],
+                tasks: ['js'],
+                options: {
+                    spawn: false,
+                },
+            },
+            css: {
+                files: ['sources/css/**/*.css'],
+                tasks: ['css'],
+                options: {
+                    spawn: false,
+                },
+            }
         }
     });
 
@@ -51,6 +67,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('css', ['less', 'cssmin']);
     grunt.registerTask('js', ['uglify']);

@@ -1,18 +1,24 @@
 [
   {
     "id": 1,
+    "url": "holding",
+    "imageUrl": "media/img/team/holding.jpg",
     "name": "Холдинг",
     "nick" : "Нивки",
     "stadion": "Школа №12"
   },
   {
     "id": 2,
+    "url": "remzavod",
+    "imageUrl": "media/img/team/remzavod.jpg",
     "name": "Ремзавод",
     "nick" : "Бандиты",
     "stadion": "Химик"
   },
   {
     "id": 3,
+    "url": "gamma",
+    "imageUrl": "media/img/team/gamma.jpg",
     "name": "Гамма",
     "nick" : "Алкаши",
     "stadion": "Интернат"

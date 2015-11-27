@@ -1,0 +1,21 @@
+<!-- Main -->
+<div class="col-md-9">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default title">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Команды</div>
+            </div>
+            <ul ng-controller="TeamListCtrl">
+                <li ng-repeat="team in teams">
+                    <a href="#/teams/{{team.id}}">{{team.name}}</a>
+                    <p>{{team.description}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sidebar -->
+<div class="col-md-3">
+    Сайдбар
+</div>

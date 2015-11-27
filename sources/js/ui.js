@@ -1,6 +1,7 @@
 /**
- * Created by dmalko on 22.09.2015.
+ * Custom UI scripts
  */
+
 jQuery(function($){
     console.log('app init');
     $(function () {
