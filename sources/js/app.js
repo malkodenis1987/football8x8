@@ -1,9 +1,27 @@
 /**
- * Created by dmalko on 22.09.2015.
+ * Main Module
+ * @type {module}
  */
-jQuery(function($){
-    console.log('app init');
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip({html: true})
-    })
-})
+
+var footApp = angular.module('footApp', [
+    'ngRoute',
+    'footControllers',
+    'footFilters',
+    'footServices'
+]);
+
+footApp.config(['$routeProvider',
+    function($routeProvider) {
+        $routeProvider.
+            when('/teams', {
+                templateUrl: 'templates/pages/team-list.html',
+                controller: 'TeamListCtrl'
+            }).
+            when('/phones/:phoneId', {
+                templateUrl: 'partials/phone-detail.html',
+                controller: 'PhoneDetailCtrl'
+            }).
+            otherwise({
+                redirectTo: '/teamsX'
+            });
+    }]);
